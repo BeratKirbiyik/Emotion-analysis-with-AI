@@ -11,7 +11,7 @@ from transformers import (
     DataCollatorWithPadding,
 )
 import evaluate
-CSV_PATH = "örnek veriler.csv"  
+CSV_PATH = "data.csv"  
 TEXT_COL = "metin"
 LABEL_COL = "etiket"
 MODEL_NAME = "dbmdz/bert-base-turkish-cased"   
