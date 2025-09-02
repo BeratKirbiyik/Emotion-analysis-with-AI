@@ -68,9 +68,7 @@ def compute_metrics(eval_pred):
         "f1_macro": f1.compute(predictions=preds, references=labels_eval, average="macro")["f1"],
     }
 
-# =========================
-# 5) Model ve Trainer
-# =========================
+
 model = AutoModelForSequenceClassification.from_pretrained(
     MODEL_NAME,
     num_labels=num_labels,
@@ -108,9 +106,7 @@ trainer = Trainer(
     data_collator=data_collator,
 )
 
-# =========================
-# 6) Eğitim + Değerlendirme + Kaydetme
-# =========================
+
 train_result = trainer.train()
 eval_result = trainer.evaluate()
 print("Validation metrics:", eval_result)
